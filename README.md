@@ -38,4 +38,7 @@ Content-Type: Application/json
 - подключения к PostgreSQL
 - путь, по которому должны храниться загруженные файлы.
 
+Либо передать эти переменные как environment variables
 Затем запустить FileServer используя sbt
+
+[Небольшое видео с демонстрацией работы сервера **>тык<**](https://youtu.be/J-E_OQjlAQY)
