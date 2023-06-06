@@ -1,0 +1,33 @@
+# curl -X POST -F "file=@/path/to/file.jpg" http://localhost:8080/upload
+
+POST http://localhost:8080/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="afa3543fa6c1b1bc17bd6be01bea6f778981160c886b40aede59662e6f18f6e2.gif"
+
+< C:\Users\dinar\Tests\mem_server\afa3543fa6c1b1bc17bd6be01bea6f778981160c886b40aede59662e6f18f6e2.gif
+--WebAppBoundary--
+
+###
+
+POST http://localhost:8080/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="file.pdf"
+
+< example/file.pdf
+--WebAppBoundary--
+
+###
+
+POST http://localhost:8080/file
+Content-Type: Application/json
+
+{
+  "token": "eXaMpLeT0kEn"
+}
+
+###
+
